@@ -12,7 +12,11 @@
   - [Security] для обновлений безопасности.
 
 ## [ToDo]
-- Create Dockerfile
 - Create basic .gitlab-ci.yml for pipeline
 
 ## [Unreleased]
+
+## [0.0.1] 2019-10-10
+### Added
+- Create Dockerfile
+- Create docker-compose.yml for local and service testing
