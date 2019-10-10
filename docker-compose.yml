@@ -1,0 +1,18 @@
+version: '3.5'
+services:
+  mongo_db:
+    image: mongo:${MONGO_VERSION}
+    volumes:
+      - crawler_db:/data/db
+
+  ui:
+    image: ${USER_NAME}/crawler-ui:${CRAWLER_UI_VERSION}
+    depends_on:
+      - mongo_db
+    environment:
+      - MONGO=mongo_db
+    ports:
+      - "8000:8000"
+
+volumes:
+  crawler_db:
